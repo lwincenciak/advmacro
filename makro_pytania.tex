@@ -2,7 +2,6 @@
 \documentclass[a4paper, notitlepage, 11pt]{article}
 \usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm, footskip=1.25cm]{geometry}
 \usepackage[OT4]{fontenc}
-\usepackage{polski}
 \usepackage{color}
 \usepackage{leon}
 \usepackage{fancyhdr}
@@ -25,188 +24,442 @@
 
 %-------------------------------------------------------------------------------
 
-\title{Makroekonomia zaawansowana -- konwersatorium\\
-          Ekonomia miêdzynarodowa: pytania przyk³adowe}
+\title{Advanced Macroeconomics\\
+       problem set}
 
-\author{dr Leszek Wincenciak}
+\author{Leszek Wincenciak, Ph. D.}
 
-\date{}
+\date{\today}
 
 \begin{document}
 
 \maketitle
 
-\tytul{Pytanie}{}
+%-------------------------------------------------------------------------------
+\tytul{Problem}{}
 
 \noindent%
-Omów g³ówne ró¿nice miêdzy neoklasyczn¹ i~now¹ teori¹ handlu. Jakie wed³ug
-nowej teorii handlu s¹ Ÿród³a korzyœci z~wymiany?
+The utility of a~consumer is given by $U(C,L)=\alpha\ln C + (1-\alpha)\ln L$, where $C$ is the aggregate consumption, and $L$ is the leisure. Total time available in one week is denoted by $T$, market wage by $w$. Assume that the non-wage income is given by $R$.
 
-\tytul{Pytanie}{}
+\begin{wylicz}
+\item Write the budget constraint for this consumer.
+\item Set up the utility maximization problem and derive the function of labour supply. Find the expression for the reservation wage.
+\item How does the labour supply respond to changes in the non-wage income?
+\item How does the labour supply respond to changes in the wage? Is the labour supply curve ,,backward-bending''?
+\item If the non-wage income is $R=0$, what would be the answer to point (d)?
+\end{wylicz}
 
-\noindent%
-W artykule Bernhofena \emph{Intra industry trade and strategic interaction:
-Theory and evidence}, autor dokonuje empirycznej weryfikacji jednej z~nowych
-teorii handlu. Przedstaw g³ówne za³o¿enia analizy oraz opisz wnioski z~niej
-uzyskane.
+Assume that the non-wage income is $R=100$ \$/week, while $\alpha=0.125$. If the market wage is 10 \$/hour, what is the optimal labour supply (hours of work per week) of this consumer? If the working week is set to 40 hours and regulations make it impossible to work part-time, should the consumer take up such a~job or remain inactive?
 
-\tytul{Pytanie}{}
-
-\noindent%
-Paul Krugman w~artykule \emph{Is free trade pass\'{e}?} analizuje problem
-protekcjonizmu w~warunkach nowej teorii handlu. Przedstaw argumenty na rzecz
-,,nowego'' protekcjonizmu i~argumenty przeciw jego stosowaniu.
-
-\tytul{Pytanie}{}
+\tytul{Problem}{}
 
 \noindent%
-Wyjaœnij jakie znaczenie dla ma³ej gospodarki otwartej w~ramach podejœcia
-miêdzyokresowego do bilansu p³atniczego ma nierównowaga na rachunku obrotów
-bie¿¹cych (deficyt lub nadwy¿ka).
+Suppose the Phillips curve is given by the following relation:
 
-\tytul{Pytanie}{}
+\begin{equation}
+\Delta w_t=\lambda_0 + (1-\lambda_1)\Delta p_t + \lambda_1\Delta p_{t-1}-\lambda_2 u_t + \lambda_3\Delta a_t,\label{phillips}
+\end{equation}
+
+and the price setting relation is:
+
+\begin{equation}
+\Delta p_t=\Delta w_t - \Delta a_t,\label{price}
+\end{equation}
+
+where $w_t$ -- log of wages, $p_t$ -- log of prices, $u_t$ -- unemployment
+rate, $a_t$ -- log of productivity, $\Delta x_t=x_t-x_{t-1}$ -- change of
+variable $x$.
+
+Suppose you have the following estimates of the parameters: $\lambda_0=0.03$,
+$\lambda_1=0.5$, $\lambda_2=0.4$, $\lambda_3=0.2$. Assume that the productivity
+grows at a~constant rate of 2\% per year.
+
+\begin{wylicz}
+\item Using equations \eqref{phillips} and \eqref{price} write the Phillips
+    curve in the form of relation between change in inflation rate and the
+    level of unemployment. Find the expression for NAIRU. Use your estimates
+    and find the value of NAIRU.
+\item How would NAIRU change if productivity growth rate slowed down to 1\%?
+    What would happen to inflation rate and unemployment in the short run
+    during the transition period?
+\item Using expression from point (b) write the level of current unemployment
+    rate as a~function of NAIRU and the change in inflation. Using your
+    estimates calculate so called 'sacrifice ratio'.
+\end{wylicz}
+
+\tytul{Problem}{}
 
 \noindent%
-Znasz pojêcie ,,tradycyjnej'' (ricardiañskiej) przewagi komparatywnej. Spróbuj
-w~œwietle miêdzyokresowego podejœcia do bilansu p³atniczego sformu³owaæ pojêcie
-miêdzyokresowej przewagi komparatywnej. W~oparciu o~przyjêt¹ definicjê
-wyjaœnij, jakie czynniki sprzyjaj¹ temu, ¿e dany kraj bêdzie importerem
-(eksporterem) bie¿¹cej konsumpcji.
+Assume that the parameters of the Phillips curve have been estimated to: $\lambda_0=0.02$, $\lambda_1=0.5$, $\lambda_2=0.2$, $\lambda_3=0.4$. Assume that the productivity grows at the constant yearly rate $\Delta a=0.02$, while the money supply at $\Delta m=0.05$.
 
-\tytul{Pytanie}{}
+Write in a~homogenous form the system of equations for the dynamics of inflation and unemployment in the NAIRU model. Using the spreadsheet application write appropriate formulas to calculate the values of unemployment and inflation in subsequent moments of time. Set $u_0=0.04$ and $\Delta p_0=0$ as initial values.
+
+\begin{wylicz}
+\item Using your spreadsheet make a~scatterplot illustrating the long-run equilibrium and the process of convergence towards it.
+\item Set the initial values of $u_0$ and $\Delta p_0$ equal to their long-run equilibrium values. Analyse what will happen to the long-run equilibrium values of unemployment and inflation and how the process of convergence will look like when:
+    \begin{wylicz}
+    \item[(i)] the growth rate of money supply is reduced to 0.04 per year;
+    \item[(ii)] the growth rate of productivity is reduced to 0.01 per year.
+    \end{wylicz}
+\item[(c)] Reset the values of all parameters. Analyse what happens to the speed of convergence when you change the value of $\lambda_1$.
+\end{wylicz}
+
+\tytul{Problem}{}
 
 \noindent%
-Za³ó¿my, ¿e dwuokresowa funkcja u¿ytecznoœci dana jest wzorem:
+Show formally stability of the following system of difference equations:
 
 \[
-U(C_1,C_2)=\frac{C_1^{1-1/\sigma}}{1-1/\sigma} +
-\beta\frac{C_2^{1-1/\sigma}}{1-1/\sigma},
+\left\{%
+\begin{array}{l}
+    u_t = \overline{u}_t-\frac{\lambda_1}{\lambda_2}(\Delta p_t-\Delta p_{t-1}) \\
+    \Delta p_t = \pi + u_t - u_{t-1} \\
+\end{array}%
+\right.
 \]
 
+
+
+\tytul{Problem}{}
+
 \noindent%
-gdzie $\beta$ to subiektywny czynnik dyskontuj¹cy. Miêdzyokresowe ograniczenie
-bud¿etowe jest nastêpuj¹ce:
+Consider the basic efficiency wages model. Suppose that fraction $f$ of workers
+belong to unions that are able to obtain a~wage that exceeds the nonunion wage
+by $\mu$ percent, so that $w_u=(1+\mu)w_n$, where subscripts $u$ and $n$ denote
+union and nonunion wages, respectively. The average wage in the economy can be
+calculated as $w_a=fw_u+(1-f)w_n$. Suppose the effort function is defined as:
 
 \[
-C_1+\frac{C_2}{1+r}=Y_1+\frac{Y_2}{1+r},
+e(w,x)=\label{example_9.12}
+\begin{cases}
+ \left(\frac{w-x}{x}\right)^\beta & \text{if } w>x \\
+ 0                                & \text{otherwise},
+\end{cases}
 \]
 
-\noindent%
-gdzie $Y_t$ jest dochodem w~okresie $t$ a~$r$ to stopa procentowa.
+where  $x = (1-bu)w_a$ is a~measure of labour market conditions, $0<\beta<1$
+and $b>0$.
 
 \begin{wylicz}
-\item Zapisz miêdzyokresowe równanie Eulera dla funkcji u¿ytecznoœci i~oblicz
-    autarkiczn¹ stopê procentow¹. Jak mo¿na interpretowaæ stopê procentow¹?
-
-\item W~jaki sposób stopa procentowa zale¿y od wartoœci $\sigma$ i~$\beta$?
-
-\item Zak³adaj¹c, ¿e $Y_1=10$, $Y_2=10$, $\sigma=0{,}5$ oraz $\beta=0{,}75$,
-    oblicz stopê procentow¹ w~równowadze autarkicznej. Przypuœæmy, ¿e w~jakimœ
-    innym kraju $Y_1=11$, $Y_2=10$, $\sigma=0{,}5$ oraz $\beta=0{,}75$. Który
-    kraj bêdzie po¿yczkodawc¹, a~który po¿yczkobiorc¹ w~okresie bie¿¹cym?
-    Dlaczego?
-
-\item Kraj ten otwiera siê na mo¿liwoœæ wymiany z~reszt¹ œwiata. Za³ó¿my, ¿e
-    istnieje miêdzynarodowy rynek, na którym stopa procentowa wynosi $r_T$
-    i~mo¿e byæ ró¿na od autarkicznej stopy procentowej $r_A$ w~tym kraju. Czy
-    kraj ten mo¿e odnieœæ korzyœci z~wymiany, jeœli $r_T>r_A$? Czy mo¿e odnieœæ
-    korzyœci, jeœli $r_T<r_A$? W~jaki sposób mo¿e to osi¹gn¹æ? Przedstaw
-    odpowiedzi na wykresie i~podaj jaki bêdzie bilans obrotów bie¿¹cych
-    w~ka¿dej sytuacji w~obu okresach?
-\end{wylicz}
-
-\tytul{Pytanie}{}
-
-\noindent%
-Przedstaw g³ówne za³o¿enia badania empirycznego zaproponowanego w~artykule
-Feldsteina i~Horioki \emph{Domestic Saving and International Capital Flows}.
-Czy wnioski uzyskane z~analizy Feldsteina i~Horioki potwierdzaj¹ miêdzyokresowe
-podejœcie do bilansu p³atniczego? Jeœli nie, to jak mo¿na wyjaœniæ powsta³e
-rozbie¿noœci?
-
-\tytul{Pytanie}{}
-
-\noindent%
-Zgodnie z~elastycznoœciowym podejœciem do bilansu p³atniczego, dewaluacja
-waluty krajowej zawsze poprawia bilans obrotów bie¿¹cych. Skomentuj.
-
-\tytul{Pytanie}{}
-
-\noindent%
-Za³ó¿my, ¿e ceny krajowe i~zagraniczne znormalizowano do jednoœci $(P=P^*=1)$,
-popyt na krajowy eksport dany jest funkcj¹ $X_d(E)=50+100E$ (wyra¿ony w~walucie
-krajowej), zaœ popyt na import dany jest przez $M_d(E)=250-100E^2$ (wyra¿ony
-w~walucie zagranicznej).
-
-\begin{wylicz}
-\item Za³ó¿my, ¿e pocz¹tkowo bilans handlowy wynosi zero. Czy deprecjacja
-    waluty krajowej poprawi bilans handlowy w~tej sytuacji?
-
-\item Wyznacz przedzia³ wartoœci kursu walutowego taki, ¿e niewielka
-    deprecjacja waluty krajowej poprawia bilans handlowy w~walucie zagranicznej
-    $(B^*(E)=X_d(E)/E-M_d(E))$ oraz w~tym samym czasie pogarsza bilans handlowy
-    w~walucie krajowej $(B(E)=X_d(E)-E\cdot M_d(E))$.
+\item Find the equilibrium unemployment rate in terms of the exogenous
+      parameters of the model ($\beta,b,f,\mu$).
+\item Suppose that $\mu=f=0.15$. What is the equilibrium unemployment rate if
+    $\beta=0.06$ and $b=1$? Is the effort exerted by unionized workers higher
+    than nonunionized workers? By how much? How does it compare to the their
+    wages ratio?
+\item What is the cost of effective labor for unionized workers relative to
+ nonunionized workers?
 \end{wylicz}
 
 
-\tytul{Pytanie}{}
+%\tytul{Problem}{}
+%
+%\noindent%
+%Consider a~simple model of shirking. Assume that providing effort $e$ causes
+%for a~worker a~cost $\phi(e)$. If the worker is providing enough effort he is
+%paid the wage $w$. In case of shirking, the worker is either caught and fired,
+%or not caught and kept in the workplace despite of the too low productivity.
+%The probability that one is caught for shirking in the firm is a~constant
+%$\theta\in (0, 1)$, and the elasticity of the worker’s efficiency cost is
+%a~constant $1/\varepsilon$:
+%
+%\begin{equation}
+%\phi(e)=\mu e^{1/\varepsilon},\qquad \frac{d\phi}{de}\frac{e}{\phi}=\frac{1}{\varepsilon},\quad \mu>0,\quad \varepsilon\in (0,1).\label{phi}\notag
+%\end{equation}
+%
+%\begin{wylicz}
+%\item Write the worker’s income without shirking.
+%
+%%is equal to the wage in the firm, $w$, minus efficiency cost $\phi(e)$:
+%%$w-\phi(e)$
+%
+%\item Write the expected worker’s income with shirking if the worker who is
+%    caught for shirking is fired and the expected wage outside the firm is $v$.
+%
+%%is equal to the wage in the firm, $w$, times the probability of not being
+%%caught for shirking, $(1-\theta)$, plus the expected wage outside the firm,
+%%$v$, times the probability of being caught for shirking, $\theta$: $(1-\theta)w
+%%+ \theta v$
+%
+%\item State the non-shirking condition and find the wage such that it makes the
+%    worker choose not to shirk.
+%
+%%The worker shirks definitely, if income for that is greater than for
+%%nonshirking, $(1-\theta)w+\theta v > w - \phi(e)$. Hence, if the employer wants
+%%to ensure that the worker does not shirk, there must be incentive comparability
+%%constraint imposed:
+%%
+%%\[
+%%(1-\theta)w+\theta v \leqslant w - \phi(e),
+%%\]
+%%
+%%which is equivalent to:
+%%
+%%\begin{equation}
+%%w\geqslant v + \frac{\phi(e)}{\theta}.\label{w_IC}
+%%\end{equation}
+%%
+%%The firm will choose the lowest possible wage that satisfies this condition, so
+%%$w= v + \phi(e)/\theta$.
+%
+%\item Using the non-shirking condition and the cost of the effort function,
+%    find the function of the effort dependent on wage.
+%
+%%From the condition \eqref{w_IC} we can state that: $\phi(e)=\theta(w-v)$. If we
+%%use the definition of the cost function from \eqref{phi} we get:
+%%
+%%\[
+%%e=\left(\frac{\theta}{\mu}\right)^\varepsilon (w-v)^\varepsilon
+%%\]
+%%
+%%Now if we take the efficiency wages condition that the elasticity of effort
+%%with respect to wages is equal 1, we get:
+%%
+%%\[
+%%\frac{\varepsilon \left(\frac{\theta}{\mu}\right)^\varepsilon (w-v)^{\varepsilon-1} w}{\left(\frac{\theta}{\mu}\right)^\varepsilon (w-v)^\varepsilon}=1
+%%\]
+%
+%%After some simplifications we get finally:
+%%
+%%\[
+%%w=\frac{v}{1-\varepsilon}.
+%%\]
+%%
+%%If we adopt that $v=(1-u)w+ub$, and assume that benefits are paid as a~constant
+%%proportion of average wage, so that $b=\beta w$, we can calculate unemployment:
+%%
+%%\[
+%%u^*=\frac{\varepsilon}{1-\beta}
+%%\]
+%%
+%%with the same conclusions as before.
+%
+%\item Using Solow condition find the optimum wage. What is the unemployment
+%    rate if $v=(1-u)w+ub$, and benefits $b$ are paid as a~constant proportion of average wage, so that $b=\beta
+%    w$?
+%\end{wylicz}
+
+
+\tytul{Problem}{}
 
 \noindent%
-Analizujemy kwestiê stabilnoœci rynku walutowego. Pomijamy w~rozwa¿aniach
-przep³ywy kapita³u i~przyjmujemy, ¿e jedynym Ÿród³em popytu i~poda¿y walut
-obcych jest handel. Przedyskutuj kwestiê stabilnoœci rynku walutowego.
-Udowodnij, ¿e na to aby po³o¿enie równowagi na rynku walutowym by³o stabilne
-wystarcza i~potrzeba, aby by³ spe³niony warunek Marshalla-Lernera.
-
-\tytul{Pytanie}{}
-
-\noindent%
-Scharakteryzuj problemy prowadzenia polityki makroekonomicznej w~ramach
-absorpcyjnego podejœcia do kursu walutowego i~bilansu p³atniczego. Wykorzystaj
-diagram Swana.
-
-
-\tytul{Pytanie}{}
-
-\noindent%
-Przedstaw ideê teorii parytetu si³y nabywczej. Wymieñ przyczyny, dla których
-w~praktyce obserwuje siê istotne odchylenia od tej teorii.
-
-\tytul{Pytanie}{}
-
-\noindent%
-Wykorzystaj podane poni¿ej informacje i~odpowiedz na pytania.
-
-\vspace{\baselineskip}\noindent%
-\begin{tabular}{l|c|c}\hline
-               & \rule{0pt}{20pt}\shortstack[c]{Cena magazynu \\,,The Economist''} & Kurs walutowy \\ \hline
- USA           & \$ 4.95       & -- \\
- W³ochy        & \euro{} 3.55  & 1.2541 USD/EUR \\
- Japonia       & $\yen$ 670    & 119.51 JPY/USD \\ \hline
-\end{tabular}
+Describe how each of the following events affect the equilibrium employment and
+wage in the Shapiro-Stiglitz model. Use the graph and give an intuitive
+explanation.
 
 \begin{wylicz}
-\item Podaj cenê magazynu ,,The Economist'' w~dolarach w~Japonii i~W³oszech.
-
-\item Oblicz wartoœæ kursu dolara wzglêdem euro i~jena implikowan¹ przez
-parytet si³y nabywczej.
-
-\item Która waluta w~œwietle teorii parytetu si³y nabywczej jest
-przewartoœciowana, a~która niedowartoœciowana wzglêdem dolara?
+ \item An increase in workers' discount rate
+ \item An increase in the job breakup rate
+ \item An improvement in the shirking detection technology
+ \item An increase in the size of the labour force
 \end{wylicz}
 
-\tytul{Pytanie}{}
+\tytul{Problem}{}
 
 \noindent%
-Jedn¹ z~przyczyn odchyleñ od zasady parytetu si³y nabywczej jest tzw. efekt
-Balassy-Samuelso\-na. Przedstaw mechanizm powstawania realnej aprecjacji waluty
-krajowej, któr¹ t³umaczy efekt Balassy-Samuelsona.
+Assume that in Shapiro-Stiglitz model unemployed workers are employed not at
+random but according to the length of unemployment period, specifically --
+those with longest unemployment spells are employed as first.
 
-\tytul{Pytanie}{}
+\begin{wylicz}
+ \item Analyse the steady-state without shirking. Find the expression for average time
+ until finding new job by the unemployed as a~function of $b$, $L$, $N$ and
+ $\overline L$.
+ \item Let $V_U$ be the value of being just unemployed. Find the formula for
+ $V_U$ as a~function of time needed to find another job, workers' discount rate
+ ($\rho$) and the value of being employed ($V_E$).
+ \item Using answers from (a) and (b) find the non-shirking condition.
+ \item How does the unemployment rate in this version of the model compare to
+ the standard Shapiro-Stiglitz model?
+\end{wylicz}
+
+\tytul{Problem}{}
 
 \noindent%
-Jakie konsekwencje dla kraju przystêpuj¹cego do Europejskiej Unii Monetarnej
-mo¿e mieæ wystêpowanie efektu Balassy-Samuelsona?
+Analyse Shapiro-Stiglitz model of efficiency wages. In addition to version of
+the model analyzed in the lecture, let's introduce unemployment benefits $z$,
+which increase $V_U$ -- the utility of the Unemployed.
+
+\begin{wylicz}
+\item Reformulate the asset equation for the value of $V_U$.
+\item Find the formula for the non-shirking condition. How does the
+    parameter $z$ influence incentives to provide effort and unemployment in
+    equilibrium?
+\item Is it possible that the model generates full employment equilibrium?
+    Use your formula from point (a) to give one example of such situation and
+    show it graphically.
+\end{wylicz}
+
+%\newpage
+
+\tytul{Problem}{}
+
+\noindent%
+Assume that in Shapiro-Stiglitz model of efficiency wages, dismissed workers
+are paid severance payments $F$. For the workers who are caught shirking
+however, the severance payment is paid with probability $p$ only.
+
+\begin{wylicz}
+\item Write the Bellman equations for the values of $V_E$, $V_S$ and $V_U$ and
+    find the 'No Shirking Condition'. For convenience of notation use $r$ as the discount
+    rate.
+\item How does increase of $F$ influence unemployment if $p=0$? How does $p$
+    affect the response of unemployment to $F$? Explain the economic mechanism
+    behind it.
+\item Is unemployment in this modified version of the model higher than in the
+    original Shapiro-Stiglitz model? Explain.
+\end{wylicz}
+
+
+\tytul{Problem}{}
+
+\noindent%
+Assume that in Shapiro-Stiglitz model of efficiency wages, workers who are
+caught shirking are not fired but instead they have to pay a~fine being
+fraction $f$ of current wage.
+
+\begin{wylicz}
+\item Write the Bellman equations for the values of $V_E$, $V_S$ and $V_U$ and
+    find the 'No Shirking Condition'.
+
+\item Draw the 'No Shirking Condition' line on a~graph. How does increase of
+    $f$ influence unemployment? Explain the relation between monitoring of workers' effort and the value of the fine.
+
+\item Find the value of $f$ for which the unemployment in this modified version
+    of the model is lower than in the original Shapiro-Stiglitz model.
+\end{wylicz}
+
+
+\tytul{Problem}{}
+
+\noindent%
+Assume that the representative firm's profits are given by
+$\pi=(eL)^\alpha/\alpha-wL$ with $0<\alpha<1$, where $e$ is the effort level.
+The labour union objective function is $U=w-x$, where $x$ is the workers'
+outside option. Assume that a~firm and union bargain over wage, then firm
+chooses employment $L$ for this negotiated wage (as in the 'right-to-manage'
+model).
+
+Assume that $e=1$, so we do not consider efficiency wages.
+
+\begin{wylicz}
+ \item What is the level of $L$ chosen by firm for given wage $w$? What is the
+ firm's profit?
+ \item Assume that the bargaining power of the union is $\gamma$, where
+ $0<\gamma<\alpha$. What is the negotiated wage?
+ \item What is the value of $\partial (\ln w)/\partial\gamma$ for $\gamma=0$?
+\end{wylicz}
+
+Assume now that $e=[(w-x)/x]^\beta$, where $0<\beta<1$.
+
+\begin{wylicz}
+ \item[(d)] What is now the level of $L$ chosen by firm for given wage $w$? What is the
+ firm's profit?
+ \item[(e)] What is the negotiated wage in this setting? (check if your solution for $\beta=0$ is the same as in point
+ (b)).
+ \item[(f)] What is the value of $\partial (\ln w)/\partial\gamma$ for
+ $\gamma=0$? Is this elasticity higher with efficiency wages or not?
+\end{wylicz}
+
+\tytul{Problem}{}
+
+\noindent%
+Assume that the firm's production function is $F(L)=L^\alpha/\alpha$, where
+$0<\alpha<1$ and the union objective function is $V=(L/N)\ln(w)+(1-L/N)\ln(B)$,
+where $B$ is the unemployment benefit.
+
+\begin{wylicz}
+\item Derive the firm's labour demand and iso-profit lines. Show them on
+ appropriate graph.
+\item Find the union indifference curves and show them on the same graph.
+\item Assuming $\beta$ as the union bargaining power and the 'right-to-manage'
+ model of wage setting, state the wage negotiation problem. Assume that the
+ firm's fallback is zero.
+\item Find the negotiated wage (may be for convenience expressed in logarithmic
+   terms).
+\item How does the union bargaining power affect negotiated wage and
+ employment?
+\item How does $\alpha$ influence the elasticity of labour demand with respect
+ to wage? How does it influence wage and employment in equilibrium?
+\item Show that the equilibrium is not Pareto efficient.
+\end{wylicz}
+
+\tytul{Problem}{}
+
+\noindent%
+Consider the search model of unemployment presented in the lecture. Using the
+graphs describing equilibrium, explain how each of the following events affect
+changes in wages, vacancies ratio and unemployment rate.
+
+\begin{wylicz}
+ \item A decrease of the separation rate
+ \item An increase in the aggregate productivity
+ \item An increase in the real interest rate
+ \item An improvement in the matching efficiency
+\end{wylicz}
+
+\tytul{Problem}{}
+
+\noindent%
+Consider the search model of unemployment presented in the lecture. Suppose
+that the flow cost of a~vacancy $c$ and the imputed value of free time $z$ are
+functions of the wage rate $w$ (instead being exogenous). In particular, assume
+that $c=c_0w$ and $z=z_0w$.
+
+\begin{wylicz}
+ \item Determine the formula for job creation and wage setting.
+ \item How do $\theta$ and wages in steady-state equilibrium react to
+ productivity changes?
+ \item Does a~continuous growth of productivity lead to a~decrease in the long
+ run unemployment rate?
+\end{wylicz}
+
+
+\tytul{Problem}{}
+
+\noindent%
+Consider the search model of unemployment presented in the lecture. In contrast
+to what was assumed that the wage is bargained over by the worker and the firm,
+assume that it is set according to Shapiro-Stiglitz model of efficiency wages
+(including unemployment benefits $z$, like in Problem 5, Problem set \#2). Adopt notation from
+the search model and denote $p(\theta)$ -- probability of finding new job per
+unit of time, $s$ -- exogenous job destruction rate, $r$ -- discount rate and
+$\mu$ -- probability of detecting shirkers per unit of time.
+
+\begin{wylicz}
+ \item Write the new formula for wage setting.
+ \item How does it differ from the original search model?
+ \item Assume there is a~positive productivity shock. How does it affect labour
+ market tightness ($\theta$), wages and unemployment in equilibrium? Are these
+ effects different than in the original search model?
+ \item Assume there is an increase of job destruction rate $s$. What happens to
+ labour market tightness ($\theta$), wages and unemployment in equilibrium? Are these
+ effects different than in the original search model?
+\end{wylicz}
+
+
+%\centerline{\emph{maybe a~few problems will be added soon}$\ldots$}
+
+\tytul{Problem}{}
+
+\noindent%
+Consider the search model of unemployment presented in the lecture. Assume that
+the matching function is given by: $m(u,v)=\phi u^\alpha v^{1-\alpha}$, where
+$0<\alpha<1$. Let $s$ be the separation rate, $r$ -- real interest rate, $c$ --
+flow cost of vacancy, $z$ -- unemployment benefits and $\beta$ -- workers'
+bargaining power.
+
+\begin{wylicz}
+\item Write the equation of unemployment rate dynamics. Find the
+    steady-state unemployment rate as a~function of $\theta$. In the space
+ $(u,\theta)$ draw the line $\dot u=0$ and a~vector field showing how the unemployment rate changes in given regions.
+\item Write the Bellman equations for job creation of firms. Using the
+    condition of wage setting, i.e. $w=(1-\beta)z+\beta(y+c\theta)$ find the equation of $\theta$ dynamics.
+    In space $(u,\theta)$ draw the line $\dot \theta=0$ and a~vector field showing how $\theta$ changes in given regions.
+\item Describe the stability of equilibrium in this model and show the effects
+    of an increase of parameter $\phi$ (explain briefly the economic interpretation of this).
+    Find the new steady-state equilibrium point and show the transitory dynamics.
+\end{wylicz}
 
 
 %-------------------------------------------------------------------------------
