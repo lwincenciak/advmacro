@@ -1,0 +1,220 @@
+%-------------------------------------------------------------------------------
+% Pakiet poleceñ napisany przez Leszka Wincenciaka
+% leon.sty
+%-------------------------------------------------------------------------------
+
+\ProvidesPackage{leon}[2017/03/15]
+\typeout{Pakiet poleceñ napisany przez Leszka Wincenciaka}
+\typeout{(c) 2005 Leszek Wincenciak}
+\typeout{ }
+
+\def\LeW{L\kern-.111em\lower.6ex\hbox{E}\kern-.111em W}
+
+\def\Copy{\copyright\LeW}
+
+%-------------------------------------------------------------------------------
+% \macierz{nazwa zmiennej}{liczba wierszy}{liczba kolumn}
+% Wstawia macierz o~nastêpuj¹cych parametrach:
+% #1 - nazwa zmiennej
+% #2 - liczba wierszy
+% #3 - liczba kolumn
+% polecenie musi byæ u¿yte w~trybie matematycznym, np. po \begin{equation} lub miêdzy $ $,
+% miêdzy $$ $$, \[ \] itd.
+
+\newcommand{\macierz}[3]{\left[\begin{array}{cccc}
+{#1}_{11} & {#1}_{12} & \ldots & {#1}_{1{#3}} \\
+{#1}_{21} & {#1}_{22} & \ldots & {#1}_{2{#3}} \\
+\vdots & \vdots & \ddots & \vdots \\
+{#1}_{{#2}1} & {#1}_{{#2}2} & \ldots & {#1}_{{#2}{#3}}
+\end{array} \right]}
+
+%-------------------------------------------------------------------------------
+% Ta komenda wpisuje osobê i~iloœæ punktów do dwukolumnowej tabeli
+
+\newcommand{\wpis}[2]{#1 & #2}
+
+%-------------------------------------------------------------------------------
+% Ta komenda wstawia liniê o~zerowej szerokoœci i~zadanej wysokoœci
+
+\newcommand*{\wys}[1]{\rule{0pt}{#1}}
+
+%-------------------------------------------------------------------------------
+% fmpage - œrodowisko obramowanej minipage
+
+\newsavebox{\fmbox}
+\newenvironment{fmpage}[1]
+{\begin{lrbox}{\fmbox}\begin{minipage}{#1}}
+{\end{minipage}\end{lrbox}\fbox{\usebox{\fmbox}}}
+
+
+% To polecenie daje wystawienie czegoœ {#2}, np. wzoru matematycznego, w pude³ku o wysokoœci {#1} baselineskip
+
+\def\lwDisplay#1#2{\nointerlineskip
+\vbox to #1\baselineskip{\vskip0.333\baselineskip\vss #2\vss}}
+
+%-------------------------------------------------------------------------------
+
+\newcommand{\monopolquota}{\begin{picture}(100,100)(0,0)
+
+\put(0,0){\vector(0,1){80}}
+\put(0,0){\vector(1,0){100}}
+
+\put(-3,-3){\makebox(0,0){0}} %pocz¹tek uk³adu
+\put(100,-4){\makebox(0,0){$Q$}} % X
+\put(-4,80){\makebox(0,0){$P$}} % Y
+\thicklines
+\put(3,70){\line(3,-2){90}}
+\put(94,10){\makebox{$D$}} %demand line
+
+\put(3,54){\line(3,-2){70}}
+\put(70,12){\makebox{$D_q$}} % quota demand line
+
+%\put(55.5,20){\makebox{$\underbrace{\ \ \ \ \ \ \ \ \ \ \ \ \ }$}}
+%\put(65,14){\makebox{$q$}} %quota
+
+\thinlines
+\put(27,50){\vector(1,0){6}}
+\put(22,50){\makebox(0,0){$q$}}
+\put(18,50){\vector(-1,0){8}}
+
+\thicklines
+\put(2.5,50){\line(3,-4){33}}
+\put(20,8){\makebox{$MR_q$}} % MR line with quota
+
+\put(3,15){\line(3,2){70}}
+\put(60,60){\makebox{$MC$}} % MC line
+\thinlines
+\put(0,0){\makebox{\dashbox{2}(10.5,20){}}}
+%\put(0,0){\makebox{\dashbox{2}(55,20){}}}
+\put(0,0){\makebox{\dashbox{2}(78,20){}}}
+
+\put(0,0){\makebox{\dashbox{2}(32.2,34.5){}}}
+\put(0,0){\makebox{\dashbox{2}(56,34.5){}}}
+
+\put(0,0){\makebox{\dashbox{2}(44,42.5){}}}
+\put(0,0){\makebox{\dashbox{2}(68,26.5){}}}
+\put(0,0){\makebox{\dashbox{2}(20,58.5){}}}
+
+\put(10.5,-4){\makebox(0,0){$Q_0$}}
+\put(20,-4){\makebox(0,0){$Q_1$}}
+\put(33,-4){\makebox(0,0){$Q_2$}}
+\put(43,-4){\makebox(0,0){$Q_3$}}
+\put(55,-4){\makebox(0,0){$Q_4$}}
+\put(68,-4){\makebox(0,0){$Q_5$}}
+\put(78,-4){\makebox(0,0){$Q_6$}}
+
+\put(-4,20){\makebox(0,0){$P_w$}}
+\put(-4,26.5){\makebox(0,0){$P_0$}}
+\put(-4,35){\makebox(0,0){$P_1$}}
+\put(-4,43.5){\makebox(0,0){$P_2$}}
+\put(-4,58.5){\makebox(0,0){$P_3$}}
+\end{picture}}
+
+%-------------------------------------------------------------------------------
+
+\newcommand{\itm}[2]{\begin{tabular}{l p{12.4cm}}
+{#1}\ & {#2} \\
+\end{tabular}}
+
+%-------------------------------------------------------------------------------
+
+\newcommand{\cz}[2]{\fontsize{#1}{#2}\selectfont}
+
+%-------------------------------------------------------------------------------
+
+\newcounter{wyliczenie}%
+
+\newlength{\dl}
+\settowidth{\dl}{(d)}
+
+\newenvironment*{wylicz}%
+{\begin{list}{(\alph{wyliczenie})}%
+{\usecounter{wyliczenie}\setlength{\leftmargin}{\parindent}%
+\setlength{\labelwidth}{\dl}%
+\addtolength{\leftmargin}{\dl}%
+\addtolength{\leftmargin}{\labelsep}%
+\setlength{\itemsep}{-0.25\baselineskip}%
+\setlength{\parsep}{0.5\baselineskip}%
+\setlength{\topsep}{0.5\baselineskip}%
+\setlength{\parskip}{0pt}%
+\setlength{\partopsep}{0pt}%
+}\addtolength{\leftmargin}{\dl}}%
+{\end{list}}
+
+\newcounter{wyl}%
+
+\newlength{\dlu}
+\settowidth{\dlu}{9.}
+
+\newenvironment*{lw_enumerate}%
+{\begin{list}{\arabic{wyl}.}%
+{\usecounter{wyl}\setlength{\leftmargin}{\parindent}%
+\setlength{\labelwidth}{\dlu}%
+\addtolength{\leftmargin}{\dlu}%
+\addtolength{\leftmargin}{\labelsep}%
+\setlength{\itemsep}{-0.25\baselineskip}%
+\setlength{\parsep}{0.5\baselineskip}%
+\setlength{\topsep}{0.5\baselineskip}%
+\setlength{\parskip}{0pt}%
+\setlength{\partopsep}{0pt}%
+}\addtolength{\leftmargin}{\dlu}}%
+{\end{list}}
+
+%-------------------------------------------------------------------------------
+% Polecenie podkreœlaj¹ce tekst
+
+\newlength{\dlugosc}%
+\newcommand{\podkresl}[1]{%
+\settowidth{\dlugosc}{#1}%
+\makebox[0pt][l]{#1}%
+\makebox[\dlugosc][l]{\raisebox{-1.5pt}{\rule{\dlugosc}{0.5pt}}}%
+}
+
+%-------------------------------------------------------------------------------
+% Polecenie kasuj¹ce pliki œmieci po kompilacji
+
+\newcommand{\delsmieci}{%
+\newwrite\batfile%
+\openout\batfile=delsmieci.bat%
+\write\batfile{@ECHO OFF^^J%
+del *.aux^^J%
+del *.bak^^J%
+del *.log^^J%
+del *.tmp^^J%
+del *.lot^^J%
+del *.lof^^J%
+del *.toc^^J%
+del *.bm^^J%
+del *.ind^^J%
+del *.ilg^^J%
+del *.out^^J%
+del *.dvi^^J%
+del *.out^^J%
+del *.snm^^J%
+del *.ps^^J%
+del *.nav^^J%
+del *.blg^^J%
+del *.bbl^^J%
+}%
+\closeout\batfile}%
+
+% Rounding with precission
+% usage: \round{number}{precission}
+
+\def\round#1#2{\begingroup
+  \dimen0=#1pt \chardef\precisioN #2
+  \advance\dimen0 by
+   .\ifcase \precisioN\or 0\or 00\or 000\or 0000\or 00000\else 000000\fi 5pt
+  \expandafter\rounded\the\dimen0
+\endgroup}
+
+\begingroup
+ \lccode`9=`p \lccode`0=`t
+ \lowercase{\endgroup \gdef\rounded#1.#290}{%
+  #1%
+  \ifnum\precisioN>0 .%
+    \truncater#20000000000\delimiter
+  \fi}
+\def\truncater#1#2#3#4#5#6#7#8#9\delimiter{%
+ \ifcase\precisioN \or #1\or #1#2\or #1#2#3\or #1#2#3#4\or #1#2#3#4#5\or
+   #1#2#3#4#5#6\or  #1#2#3#4#5#6#7\else #1#2#3#4#5#6#7#8\fi}
