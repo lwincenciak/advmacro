@@ -22,11 +22,13 @@
 
 \renewcommand{\theequation}{\arabic{zadlicz}.\arabic{equation}}%
 
+\newcommand{\Deriv}[2]{\ensuremath\frac{\partial #1}{\partial #2}\ensuremath}%
+
 %-------------------------------------------------------------------------------
 
 \title{Advanced Macroeconomics Problem Set}
 
-\author{Leszek Wincenciak, Ph. D.\\ University of Warsaw\\ ver. 17.3.13.001}
+\author{Leszek Wincenciak, Ph. D.\\ University of Warsaw\\ ver. 17.3.15.001}
 
 \date{\today}
 
@@ -49,6 +51,20 @@ The utility of a~consumer is given by $U(C,L)=\alpha\ln C + (1-\alpha)\ln L$, wh
 \end{wylicz}
 
 Assume that the non-wage income is $R=100$ \$/week, while $\alpha=0.125$. If the market wage is 10 \$/hour, what is the optimal labour supply (hours of work per week) of this consumer? If the working week is set to 40 hours and regulations make it impossible to work part-time, should the consumer take up such a~job or remain inactive?
+
+%-------------------------------------------------------------------------------
+\tytul{Problem}{}
+
+\noindent%
+Assume that skilled and unskilled workers are inputs in the production function $Y = F(L_s,L_u)$ with standard assumptions: $F_u\equiv \Deriv{F}{L_u}>0$, $F_s\equiv\Deriv{F}{L_s}>0$,
+$F_{uu}\equiv\frac{\partial^2F}{\partial L_u^2}<0$, and
+$F_{ss}\equiv\frac{\partial^2F}{\partial L_s^2}<0$. Assume further that $F_{ss}F_{uu}-F^2_{su}>0$. Labour supply of both types is fixed and inelastic.
+
+\begin{wylicz}
+\item Write the conditions which implicitly give the demand for both types of labour.
+\item Analyse the way in which wages of skilled and unskilled influence the demand for both types of labour. What additional assumptions have to be made to determine these relationships?
+\item Assume that the minimum wage (binding for the unskilled) has been introduced. How does it influence the wages of skilled and unskilled when both types of labour are treated as gross substitutes in the production function? Show your analysis graphically.
+\end{wylicz}
 
 %-------------------------------------------------------------------------------
 \tytul{Problem}{}
@@ -189,7 +205,7 @@ Analyse Shapiro-Stiglitz model of efficiency wages. In addition to version of th
 \end{wylicz}
 
 %-------------------------------------------------------------------------------
-\newpage%
+%\newpage%
 \tytul{Problem}{}
 
 \noindent%
@@ -213,6 +229,18 @@ Assume that in Shapiro-Stiglitz model of efficiency wages, workers who are caugh
 \item Find the value of $f$ for which the unemployment in this modified version of the model is lower than in the original Shapiro-Stiglitz model.
 \end{wylicz}
 
+%-------------------------------------------------------------------------------
+\tytul{Problem}{}
+
+\noindent%
+Consider slightly modified version of the Shapiro-Stiglitz model, in which the shirkers' effort level is $e_L>0$, while the desired effort is $e_H$, with $e_H>e_L$. Workers who are caught shirking are fired and have to pay a~fine of $f$. Assume that the unemployed receive the benefits of $z$. Other assumptions are the same as in the original model.
+
+\begin{wylicz}
+\item Write the Bellman equations for $V_E$, $V_S$ and $V_U$.
+\item State the Non-Shirking Condition and find the wage that satisfies it.
+\item What factors and in what way influence the unemployment in equilibrium? Provide the economic interpretation of your findings.
+\item What value of the fine $f$ makes the full employment in equilibrium possible? What does this value  depend on?
+\end{wylicz}
 
 %-------------------------------------------------------------------------------
 \tytul{Problem}{}
@@ -328,6 +356,15 @@ We analyse the search and matching model of unemployment presented in the lectur
 \item Suppose you observe a~one time increase of the population size (as opposed to constant growth over time) resulting from a~wave of immigration. What will be the short-run and long-run effects of this event on the rate of unemployment?
 \end{wylicz}
 
+
+%-------------------------------------------------------------------------------
+\tytul{Problem}{}
+
+\noindent%
+What is the impact of job separation rate on equilibrium unemployment and wages? Analyse these two
+relationships using the Shapiro-Stiglitz model and the search and matching model. Are the answers
+the same in both cases (models)? Explain your statements using these two models with appropriate
+formulas and/or graphs.
 
 %-------------------------------------------------------------------------------
 \end{document}
